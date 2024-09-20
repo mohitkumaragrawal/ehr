@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ipfs:
+    image: ipfs/go-ipfs
+    container_name: ipfs_daemon
+    restart: always
+    ports:
+      - "4001:4001"   # IPFS Swarm port
+      - "5001:5001"   # IPFS API port
+      - "8080:8080"   # IPFS Gateway port
+    volumes:
+      - ipfs_data:/data/ipfs   # Mount IPFS data directory
+      - ./config.json:/root/.ipfs/config   # Mount custom IPFS configuration file
+    command: ["daemon", "--migrate=true"]
+
+volumes:
+  ipfs_data:
+
