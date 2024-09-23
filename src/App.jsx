@@ -1,10 +1,12 @@
 import { NextUIProvider } from "@nextui-org/react";
-import Home from "./pages/Home";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MyNavBar from "./components/NavBar";
-import Doctor from "./pages/Doctor";
-import AddDoctor from "./pages/AddDoctor";
+import RegisterPage from "./pages/RegisterPage";
+import UploadPage from "./pages/UploadPage";
+import ViewPage from "./pages/ViewPage";
+import PendingRequestsPage from "./pages/PendingRequestPage";
+import RequestPage from "./pages/RequestPage";
 
 const router = createBrowserRouter([
   {
@@ -18,17 +20,25 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/patient",
-    element: <Home />,
+    path: "/register",
+    element: <RegisterPage />
   },
   {
-    path: "/doctor",
-    element: <Doctor />,
+    path: "/upload",
+    element: <UploadPage />
   },
   {
-    path: "/add-doctor",
-    element: <AddDoctor />,
+    path: "/view",
+    element: <ViewPage />
   },
+  {
+    path: "/pending",
+    element: <PendingRequestsPage />
+  },
+  {
+    path: "/request",
+    element: <RequestPage />
+  }
 ]);
 
 function App() {

@@ -16,18 +16,28 @@ export default function MyNavBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/patient">
-            Patients
+          <Link color="foreground" href="/register">
+            Register
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/doctor">
-            Doctors
+          <Link color="foreground" href="/upload">
+            Upload
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/add-doctor">
-            Add Doctor
+          <Link color="foreground" href="/view">
+            View
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/pending">
+            Pending Requests
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/request">
+            Request
           </Link>
         </NavbarItem>
         <WalletBalance />
